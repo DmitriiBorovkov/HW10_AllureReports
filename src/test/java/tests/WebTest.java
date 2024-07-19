@@ -7,6 +7,7 @@ import io.qameta.allure.Story;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import tests.StepsForTests.StepsForWebTests;
 
 public class WebTest extends TestBase {
     @Test
