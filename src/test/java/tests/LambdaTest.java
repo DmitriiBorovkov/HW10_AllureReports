@@ -46,7 +46,5 @@ public class LambdaTest extends TestBase {
         step("Проверяем наличие Issue с номером " + ISSUE, () -> {
             $(withText(ISSUE)).should(Condition.exist);
         });
-
     }
-
 }
