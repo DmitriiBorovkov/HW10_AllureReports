@@ -23,7 +23,7 @@ public class LambdaTest extends TestBase {
     @Owner("Borovkov D.A.")
     @Feature("Feature №2")
     @Story("Story №3")
-    public void testLambdaStep() {
+    public void lambdaStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         step("Открываем главную страницу", () -> {
             open("");

@@ -14,34 +14,34 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class StepsForWebTests {
     @Step("Открываем главную страницу")
-    public void openMainPage() {
+    public void openMainPageTest() {
         open("");
     }
 
     @Step("Ищем репозиторий {rep}")
-    public void searchForRepository(String rep) {
+    public void searchForRepositoryTest(String rep) {
         $(".search-input").click();
         $("#query-builder-test").sendKeys(rep);
         $("#query-builder-test").pressEnter();
     }
 
     @Step("Кликаем по ссылке репозитория {rep}")
-    public void clickOnRepositoryLink(String rep) {
+    public void clickOnRepositoryLinkTest(String rep) {
         $(By.linkText(rep)).click();
     }
 
     @Step("Открываем таб Issues")
-    public void openIssuesTab() {
+    public void openIssuesTabTest() {
         $("#issues-tab").click();
     }
 
     @Step("Проверяем наличие Issue с номером {issue}")
-    public void shouldSeeIssueWithNumber(String issue) {
+    public void shouldSeeIssueWithNumberTest(String issue) {
         $(withText(issue)).should(Condition.exist);
     }
 
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
-    public byte[] takeScreenshot() {
+    public byte[] takeScreenshotTest() {
         return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 }

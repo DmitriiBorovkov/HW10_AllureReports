@@ -14,15 +14,15 @@ public class WebTest extends TestBase {
     @Owner("Borovkov D.A.")
     @Feature("Feature №1")
     @Story("Story №1")
-    public void testAnnotatedStep() {
+    public void annotatedStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         StepsForWebTests steps = new StepsForWebTests();
 
-        steps.openMainPage();
-        steps.searchForRepository(REPOSITORY);
-        steps.clickOnRepositoryLink(REPOSITORY);
-        steps.openIssuesTab();
-        steps.shouldSeeIssueWithNumber(ISSUE);
-        steps.takeScreenshot();
+        steps.openMainPageTest();
+        steps.searchForRepositoryTest(REPOSITORY);
+        steps.clickOnRepositoryLinkTest(REPOSITORY);
+        steps.openIssuesTabTest();
+        steps.shouldSeeIssueWithNumberTest(ISSUE);
+        steps.takeScreenshotTest();
     }
 }

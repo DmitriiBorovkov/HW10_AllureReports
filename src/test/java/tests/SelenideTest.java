@@ -20,7 +20,7 @@ public class SelenideTest extends TestBase {
     @Owner("Borovkov D.A.")
     @Feature("Feature №1")
     @Story("Story №2")
-    public void testIssueSearch() {
+    public void simpleSelenideTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         open("");
